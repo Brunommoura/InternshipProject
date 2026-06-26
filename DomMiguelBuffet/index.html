@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Miguel Buffet & Eventos | Alta Gastronomia em Natal</title>
+    <meta name="description" content="Há mais de 20 anos transformando eventos em Natal/RN com alta gastronomia, sofisticação e momentos inesquecíveis. Faça seu orçamento.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#home">Dom Miguel<span>.</span></a>
+            </div>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <div class="header-cta">
+                <a href="#orcamento" class="btn btn-outline">Faça seu orçamento</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay">
+        <nav class="mobile-links">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#faq">FAQ</a>
+            <a href="#orcamento" class="btn btn-primary">Faça seu orçamento</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2070&auto=format&fit=crop" alt="Evento sofisticado com taças de vinho">
+            <div class="overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <span class="badge">Tradição & Excelência em Natal/RN</span>
+            <h1>A Arte de Criar<br>Momentos <em>Inesquecíveis</em>.</h1>
+            <p>Com mais de 20 anos de experiência, o Dom Miguel Buffet eleva o padrão de eventos através de uma gastronomia sofisticada, atendimento acolhedor e atenção impecável a cada detalhe.</p>
+            <div class="hero-actions">
+                <a href="#orcamento" class="btn btn-primary btn-large">Faça seu orçamento</a>
+                <a href="#menu" class="btn btn-text">Explorar Cardápio &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Nossa Assinatura Gastronômica</h2>
+                <p>Cardápios personalizados e ingredientes frescos selecionados para impressionar os paladares mais exigentes.</p>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Categoria 1 -->
+                <div class="menu-card">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop" alt="Welcome Drinks">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Welcome Drinks</h3>
+                        <p>Recepção elegante com coquetéis clássicos, espumantes selecionados e águas aromatizadas refrescantes.</p>
+                    </div>
+                </div>
+
+                <!-- Categoria 2 -->
+                <div class="menu-card">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?q=80&w=2070&auto=format&fit=crop" alt="Entradas Finas">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Entradas Finas</h3>
+                        <p>Canapés delicados, tartare de salmão, ceviche fresco e mini porções empratadas com extrema sofisticação.</p>
+                    </div>
+                </div>
+
+                <!-- Categoria 3 -->
+                <div class="menu-card">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1974&auto=format&fit=crop" alt="Ilhas Gastronômicas">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Ilhas Gastronômicas</h3>
+                        <p>Estações interativas de queijos e frios artesanais, antepastos, frutos do mar e culinária internacional.</p>
+                    </div>
+                </div>
+
+                <!-- Categoria 4 -->
+                <div class="menu-card">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1544025162-8350810d79d1?q=80&w=2070&auto=format&fit=crop" alt="Pratos Principais">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Pratos Principais</h3>
+                        <p>Opções nobres como filé mignon ao molho madeira, risotos aromáticos e massas artesanais perfeitamente executadas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider Image -->
+    <section class="image-divider">
+        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069&auto=format&fit=crop" alt="Detalhe evento de alto padrão">
+    </section>
+
+    <!-- Orçamento Form Section -->
+    <section id="orcamento" class="orcamento-section section-padding">
+        <div class="container">
+            <div class="orcamento-wrapper">
+                <div class="orcamento-content">
+                    <h2>Transforme seu evento em realidade.</h2>
+                    <p>Entre em contato conosco e receba uma proposta exclusiva, desenhada sob medida para a sua celebração.</p>
+                    <ul class="benefits-list">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Degustação Exclusiva</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Consultoria de Menu Personalizado</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Equipe Altamente Treinada</li>
+                    </ul>
+                </div>
+                <div class="orcamento-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group full-width">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required placeholder="Seu nome">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefone / WhatsApp</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="(84) 90000-0000">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Data do Evento</label>
+                                <input type="date" id="date" name="date">
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Nº Estimado de Convidados</label>
+                                <input type="number" id="guests" name="guests" min="1" placeholder="Ex: 150">
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="type">Tipo de Evento</label>
+                            <select id="type" name="type">
+                                <option value="" disabled selected>Selecione uma opção...</option>
+                                <option value="casamento">Casamento</option>
+                                <option value="corporativo">Corporativo</option>
+                                <option value="15anos">15 Anos</option>
+                                <option value="formatura">Formatura</option>
+                                <option value="aniversario">Aniversário/Bodas</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Mensagem ou Detalhes</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Conte-nos um pouco sobre como você imagina o seu evento..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Solicitar Orçamento</button>
+                        <p class="form-success-msg hidden">Sua solicitação foi enviada com sucesso! Entraremos em contato em breve.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Dúvidas Frequentes</h2>
+                <p>Tudo o que você precisa saber para planejar o evento perfeito.</p>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Vocês realizam a personalização do cardápio para restrições alimentares?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="plus-icon"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, com certeza! Entendemos que cada evento é único. Nossa equipe de chefs está preparada para adaptar qualquer prato do menu para atender a restrições como dietas veganas, vegetarianas, intolerância a glúten ou lactose, garantindo que todos os seus convidados tenham uma experiência gastronômica excelente.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Com quanta antecedência devo fazer a reserva da data?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="plus-icon"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Para garantir a disponibilidade da nossa equipe na data desejada, recomendamos que o contato inicial e o fechamento do contrato sejam feitos com 8 a 12 meses de antecedência, especialmente para casamentos e formaturas. Para eventos corporativos ou menores, de 3 a 6 meses costumam ser suficientes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>O Dom Miguel realiza eventos em outras cidades fora de Natal/RN?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="plus-icon"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Embora nossa sede seja em Natal, temos toda a logística e infraestrutura necessárias para atender a eventos em Pipa, São Miguel do Gostoso, e outras regiões do Rio Grande do Norte, mantendo o mesmo padrão de excelência.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>O serviço inclui mobiliário e peças de decoração para a área gastronômica?</span>
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="plus-icon"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nós fornecemos todo o material e acervo fino de mesa (louças, taças, talheres de prata e rechauds de alto padrão) necessário para o serviço de buffet. O mobiliário (mesas e cadeiras para convidados) e a decoração floral geral do ambiente não estão inclusos, mas podemos indicar parceiros de confiança.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">Dom Miguel<span>.</span></a>
+                <p>A arte da alta gastronomia há mais de 20 anos em Natal. Transformando eventos em memórias preciosas.</p>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>Email: <a href="mailto:contato@dommiguelbuffet.com.br">contato@dommiguelbuffet.com.br</a></p>
+                <p>Telefone: <a href="tel:+5584999990000">(84) 99999-0000</a></p>
+                <p>Av. Prudente de Morais, 1234 - Tirol<br>Natal/RN, 59000-000</p>
+            </div>
+
+            <div class="footer-social">
+                <h4>Siga-nos</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Pinterest">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 0-3.66 19.3c.12-.9.23-2.3-.05-3.26-.26-.88-1.63-5.5-1.63-5.5s-.41-.83-.41-2.06c0-1.93 1.12-3.37 2.52-3.37 1.12 0 1.66.84 1.66 1.84 0 1.12-.72 2.81-1.09 4.38-.31 1.31.66 2.37 1.94 2.37 2.33 0 4.12-2.45 4.12-6 0-3.13-2.25-5.32-5.48-5.32-3.75 0-5.95 2.81-5.95 5.72 0 1.13.44 2.34.98 3 .11.14.12.25.09.38-.09.38-.31 1.25-.35 1.41-.05.2-.17.25-.38.16-1.42-.64-2.31-2.65-2.31-4.26 0-3.46 2.51-6.64 7.25-6.64 3.8 0 6.75 2.7 6.75 6.3 0 3.77-2.38 6.81-5.69 6.81-1.1 0-2.14-.57-2.5-1.25l-.68 2.58c-.24.93-.89 2.09-1.33 2.8A10 10 0 0 0 12 22"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dom Miguel Buffet & Eventos LTDA. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
