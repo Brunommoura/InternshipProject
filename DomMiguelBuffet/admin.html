@@ -108,6 +108,32 @@ tr:last-child td{border-bottom:none}
 .empty{text-align:center;padding:3rem 1rem;color:var(--muted)}
 .empty .big{font-size:2.5rem;margin-bottom:.5rem;opacity:.4}
 .note{background:#fbf6e8;border:1px solid #ecdca8;color:#7a6320;padding:.8rem 1rem;border-radius:6px;font-size:.85rem;margin-bottom:1.2rem}
+
+/* ===== Instruções ===== */
+.instr-grid{display:grid;grid-template-columns:220px 1fr;gap:2rem;align-items:start}
+.instr-quick{position:sticky;top:1rem;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.2rem}
+.instr-quick .quick-title{font-size:.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:.8rem;font-weight:600}
+.instr-quick a{display:block;padding:.5rem .1rem;color:var(--text);text-decoration:none;font-size:.9rem;border-bottom:1px solid var(--line);transition:.15s}
+.instr-quick a:last-child{border-bottom:none}
+.instr-quick a:hover{color:var(--gold-h);padding-left:.3rem}
+.instr-content{max-width:820px}
+.instr-block{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.6rem 1.8rem;margin-bottom:1.2rem;position:relative}
+.instr-block h3{font-size:1.35rem;margin-bottom:.7rem;color:var(--primary)}
+.instr-block p{margin-bottom:.7rem;line-height:1.65;color:var(--text)}
+.instr-block ul,.instr-block ol{margin:.5rem 0 .8rem 1.6rem;line-height:1.7}
+.instr-block li{margin-bottom:.35rem}
+.instr-block code{background:var(--bg);padding:.15rem .4rem;border-radius:4px;font-size:.9em;color:var(--primary);font-family:'Courier New',monospace}
+.instr-num{position:absolute;top:1.2rem;right:1.4rem;width:2.4rem;height:2.4rem;background:var(--gold);color:var(--primary);border-radius:50%;display:grid;place-items:center;font-family:var(--fh);font-size:1.3rem;font-weight:700}
+.instr-tip{background:#fbf6e8;border-left:3px solid var(--gold);padding:.75rem 1rem;border-radius:0 6px 6px 0;font-size:.88rem;color:#7a6320;margin-top:.8rem}
+.instr-status{background:var(--bg);border-radius:6px;padding:1rem 1.2rem;line-height:2.4;font-size:.9rem}
+.instr-status .tag{margin-right:.5rem}
+.instr-faq p{padding:.7rem 0;border-bottom:1px solid var(--line);margin-bottom:0}
+.instr-faq p:last-child{border-bottom:none}
+.instr-faq b{color:var(--primary)}
+@media(max-width:820px){
+  .instr-grid{grid-template-columns:1fr}
+  .instr-quick{position:static}
+}
 .pill{display:inline-block;background:var(--bg);border:1px solid var(--line);border-radius:50px;padding:.2rem .7rem;font-size:.8rem;margin:.15rem}
 
 @media(max-width:820px){
@@ -145,6 +171,7 @@ tr:last-child td{border-bottom:none}
     <button class="navbtn" data-page="orcamentos">📄 Orçamentos</button>
     <button class="navbtn" data-page="financeiro">💰 Financeiro</button>
     <button class="navbtn" data-page="pacotes">🍽️ Pacotes / Cardápios</button>
+    <button class="navbtn" data-page="instrucoes">📖 Instruções</button>
     <button class="logout" onclick="logout()">↩ Sair</button>
   </aside>
 
@@ -190,8 +217,135 @@ tr:last-child td{border-bottom:none}
         <div><h2>Pacotes / Cardápios</h2><p>Valores por pessoa e opções de cada cardápio.</p></div>
         <button class="btn btn-gold btn-sm" onclick="openPkgEditor()">+ Novo pacote</button>
       </div>
-      <div class="note">⚠️ O <b>Churrasco Tradicional</b> abaixo veio do seu modelo real (Floriano). Os outros pacotes e a <b>Comida de Boteco</b> têm itens de exemplo — edite à vontade. Tudo fica salvo no navegador.</div>
+      <div class="note">💡 O <b>Churrasco Tradicional</b> abaixo veio do modelo real da empresa. Você pode editar todos os pacotes, adicionar novos ou remover — todas as alterações ficam salvas no banco de dados.</div>
       <div id="pkgList"></div>
+    </section>
+
+    <!-- INSTRUÇÕES -->
+    <section class="page" id="page-instrucoes">
+      <div class="page-head">
+        <div><h2>Instruções</h2><p>Guia rápido para usar o sistema.</p></div>
+      </div>
+
+      <div class="instr-grid">
+        <!-- QUICK LINKS -->
+        <div class="instr-quick">
+          <div class="quick-title">Ir para:</div>
+          <a href="#instr-1">1. Como acessar</a>
+          <a href="#instr-2">2. Gerenciar leads</a>
+          <a href="#instr-3">3. Montar orçamento</a>
+          <a href="#instr-4">4. Gerar PDF</a>
+          <a href="#instr-5">5. Fechar evento</a>
+          <a href="#instr-6">6. Financeiro</a>
+          <a href="#instr-7">7. Editar pacotes</a>
+          <a href="#instr-8">Perguntas frequentes</a>
+        </div>
+
+        <!-- CONTEÚDO -->
+        <div class="instr-content">
+
+          <div class="instr-block" id="instr-1">
+            <div class="instr-num">1</div>
+            <h3>Como acessar o sistema</h3>
+            <p>O sistema fica no mesmo endereço do site, com <code>/admin.html</code> no final. Basta digitar no navegador (Chrome, Safari, Edge ou Firefox) e fazer login com seu e-mail e senha cadastrados.</p>
+            <div class="instr-tip">💡 Salve o endereço nos favoritos para acessar rapidamente. O sistema lembra da sua sessão — não precisa digitar senha toda vez.</div>
+          </div>
+
+          <div class="instr-block" id="instr-2">
+            <div class="instr-num">2</div>
+            <h3>Gerenciar leads (pedidos)</h3>
+            <p>Um <b>lead</b> é um cliente interessado. Ele pode chegar por duas vias:</p>
+            <ul>
+              <li><b>Automaticamente:</b> quando alguém preenche o formulário no site, o lead aparece direto na aba <b>Leads / Pedidos</b> e um e-mail avisa a equipe.</li>
+              <li><b>Manualmente:</b> para clientes que chegaram por WhatsApp ou telefone, clique em <b>+ Novo lead</b> e preencha os dados.</li>
+            </ul>
+            <p>Cada lead tem um <b>status</b> que você pode mudar conforme o atendimento avança:</p>
+            <div class="instr-status">
+              <span class="tag novo">Novo</span> Pedido acabou de chegar<br>
+              <span class="tag em_orcamento">Em orçamento</span> Proposta já foi montada e enviada<br>
+              <span class="tag fechado">Fechado</span> Cliente aceitou, evento confirmado<br>
+              <span class="tag perdido">Perdido</span> Cliente desistiu ou fechou com outro
+            </div>
+          </div>
+
+          <div class="instr-block" id="instr-3">
+            <div class="instr-num">3</div>
+            <h3>Montar um orçamento</h3>
+            <p>Na aba <b>Leads</b>, clique em <b>Montar orçamento</b> na linha do cliente. Uma janela abre e você pode:</p>
+            <ol>
+              <li>Confirmar o <b>pacote</b> (já vem sugerido pelo formulário) e o <b>número de pessoas</b>.</li>
+              <li>Escolher se é <b>com ou sem bebidas</b> não alcoólicas.</li>
+              <li>Nas seções do cardápio (Entradas, Carnes, Acompanhamentos, etc.): marcar/desmarcar itens, editar textos, remover ou <b>adicionar itens novos</b> em cada seção.</li>
+              <li>Se quiser, criar uma seção nova personalizada.</li>
+              <li>Informar o <b>custo interno estimado</b> (opcional — usado para calcular a margem quando o evento fechar).</li>
+              <li>Clicar em <b>Salvar orçamento</b>. Ele aparece na aba Orçamentos e o status do lead vira "Em orçamento".</li>
+            </ol>
+            <div class="instr-tip">💡 As alterações que você faz na montagem valem <b>só para este orçamento</b>. Não mudam o pacote original — para isso, use a aba Pacotes.</div>
+          </div>
+
+          <div class="instr-block" id="instr-4">
+            <div class="instr-num">4</div>
+            <h3>Gerar o PDF do orçamento</h3>
+            <p>O PDF é a proposta profissional que vai para o cliente. Ele já vem com logo, itens escolhidos, valores, forma de pagamento e observações.</p>
+            <ul>
+              <li><b>Durante a montagem:</b> clique em <b>Gerar PDF</b> na janela do orçamento. O arquivo é baixado no computador.</li>
+              <li><b>Depois de salvo:</b> na aba <b>Orçamentos</b>, clique no botão <b>PDF</b> ao lado do orçamento desejado.</li>
+            </ul>
+            <div class="instr-tip">💡 Envie o PDF ao cliente por WhatsApp ou e-mail. Ele já contém tudo que o cliente precisa saber.</div>
+          </div>
+
+          <div class="instr-block" id="instr-5">
+            <div class="instr-num">5</div>
+            <h3>Marcar um evento como fechado</h3>
+            <p>Quando o cliente confirma:</p>
+            <ol>
+              <li>Vá na aba <b>Orçamentos</b>.</li>
+              <li>Encontre o orçamento na lista.</li>
+              <li>Na coluna de status, use o menu suspenso e escolha <b>Fechado</b>.</li>
+            </ol>
+            <p>Ele aparecerá imediatamente na aba Financeiro, alimentando os indicadores.</p>
+          </div>
+
+          <div class="instr-block" id="instr-6">
+            <div class="instr-num">6</div>
+            <h3>Acompanhar o Financeiro</h3>
+            <p>Na aba <b>Financeiro</b> você vê:</p>
+            <ul>
+              <li><b>Eventos fechados:</b> quantos foram confirmados</li>
+              <li><b>Receita total:</b> soma dos valores</li>
+              <li><b>Custos:</b> soma dos custos internos que você informou</li>
+              <li><b>Margem:</b> receita menos custos (o lucro estimado)</li>
+              <li><b>Ticket médio:</b> receita dividida pelos eventos</li>
+            </ul>
+            <p>Para cadastrar um evento antigo que não passou pelo sistema, use <b>+ Novo lançamento</b> e informe cliente, data, receita e custo.</p>
+          </div>
+
+          <div class="instr-block" id="instr-7">
+            <div class="instr-num">7</div>
+            <h3>Editar os pacotes e cardápios</h3>
+            <p>Na aba <b>Pacotes / Cardápios</b>, você define o que a empresa oferece. As alterações valem para todos os orçamentos futuros.</p>
+            <ul>
+              <li><b>Editar pacote:</b> ajuste nome, valores (com/sem bebidas), mínimo de pessoas, horas, equipe inclusa e o que não está incluso. Depois adicione, remova ou renomeie itens nas seções.</li>
+              <li><b>Criar novo pacote:</b> use <b>+ Novo pacote</b> e preencha do zero.</li>
+              <li><b>Excluir:</b> use com cuidado — orçamentos antigos que usam o pacote continuam funcionando, mas não será possível criar novos com ele.</li>
+            </ul>
+          </div>
+
+          <div class="instr-block" id="instr-8">
+            <div class="instr-num">?</div>
+            <h3>Perguntas frequentes</h3>
+
+            <div class="instr-faq">
+              <p><b>Preciso instalar algum programa?</b><br>Não. Funciona direto no navegador — computador, tablet ou celular.</p>
+              <p><b>Onde ficam salvos os dados?</b><br>Em um banco de dados na nuvem (Supabase). Você pode acessar de qualquer lugar e os dados são os mesmos.</p>
+              <p><b>Várias pessoas podem usar ao mesmo tempo?</b><br>Sim. Basta criar um usuário para cada uma no Supabase. Todas veem e editam os mesmos dados em tempo real.</p>
+              <p><b>Apaguei sem querer, dá para recuperar?</b><br>Não pelo painel — a exclusão é permanente. O banco faz backups, mas restaurar exige acesso técnico ao Supabase.</p>
+              <p><b>O e-mail automático não chegou. E agora?</b><br>Ele avisa a equipe (não o cliente) sobre novos leads. Confira o spam. Se persistir, verifique os logs da Edge Function no Supabase.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
   </main>
